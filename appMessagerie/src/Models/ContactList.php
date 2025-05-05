@@ -14,4 +14,9 @@ class ContactList
     {
         $this->owner = $owner;
     }
+
+    public function addContact(User $contact): void
+    {
+        $this->contacts[] = $contact;
+    }
 }
