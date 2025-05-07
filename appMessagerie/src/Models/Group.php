@@ -9,7 +9,7 @@ class Group
     private int $id;
     private string $name;
     private User $admin;
-    private bool $private;
+    private bool $private = true; // Default value is false
 
     public function __construct(string $name, User $admin)
     {
@@ -33,6 +33,25 @@ class Group
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of private
+     */
+    public function isPrivate()
+    {
+        return $this->private;
+    }
+    /**
+     * Set the value of private
+     *
+     * @return  self
+     */
+    public function setPrivate($private)
+    {
+        $this->private = $private;
 
         return $this;
     }

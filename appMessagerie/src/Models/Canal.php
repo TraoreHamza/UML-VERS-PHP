@@ -10,7 +10,7 @@ class Canal
     private User $sender;
     private User $receiver;
     private string $key;
-    private bool $archive;
+    private bool $archive = false;
 
 
     public function __construct(User $sender, User $receiver, string $key)
